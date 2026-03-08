@@ -2,11 +2,15 @@
   "name": "Eclipse",
   "author": "astosia",
   "version": "1.0.0",
-  "keywords": ["pebble-app"],
+  "keywords": [
+    "pebble-app"
+  ],
   "private": true,
   "dependencies": {
-    "@rebble/clay": "^1.0.6"
-    },
+    "@rebble/clay": "^1.0.8",
+    "pebble-fctx": "^1.6.5",
+    "pebble-fctx-compiler": "^1.2.2"
+  },
   "pebble": {
     "displayName": "Eclipse",
     "uuid": "18c14ab3-d17d-4f46-b1b8-ff68d4481fe0",
@@ -20,41 +24,226 @@
       "watchface": true
     },
     "messageKeys": [
-      "inverted"
+      "theme",
+      "custom_bg",
+      "custom_lg",
+      "custom_dg",
+      "custom_fg",
+      "AddZero12h",
+      "RemoveZero24h",
+      "BTVibeOn",
+      "showlocalAMPM",
+      "time_text_color",
+      "other_text_color",
+      "line_color",
+      "LogoText",
+      "ShowLine",
+      "ShowText",
+      "ShowTime",
+      "ShowInfo"
     ],
     "projectType": "native",
     "resources": {
       "media": [
-        { "type": "bitmap", "name": "FRAME_00", "file": "images/frame_00.png" },
-        { "type": "bitmap", "name": "FRAME_01", "file": "images/frame_01.png" },
-        { "type": "bitmap", "name": "FRAME_02", "file": "images/frame_02.png" },
-        { "type": "bitmap", "name": "FRAME_03", "file": "images/frame_03.png" },
-        { "type": "bitmap", "name": "FRAME_04", "file": "images/frame_04.png" },
-        { "type": "bitmap", "name": "FRAME_05", "file": "images/frame_05.png" },
-        { "type": "bitmap", "name": "FRAME_06", "file": "images/frame_06.png" },
-        { "type": "bitmap", "name": "FRAME_07", "file": "images/frame_07.png" },
-        { "type": "bitmap", "name": "FRAME_08", "file": "images/frame_08.png" },
-        { "type": "bitmap", "name": "FRAME_09", "file": "images/frame_09.png" },
-        { "type": "bitmap", "name": "FRAME_10", "file": "images/frame_10.png" },
-        { "type": "bitmap", "name": "FRAME_11", "file": "images/frame_11.png" },
-        { "type": "bitmap", "name": "FRAME_12", "file": "images/frame_12.png" },
-        { "type": "bitmap", "name": "FRAME_13", "file": "images/frame_13.png" },
-        { "type": "bitmap", "name": "FRAME_14", "file": "images/frame_14.png" },
-        { "type": "bitmap", "name": "FRAME_15", "file": "images/frame_15.png" },
-        { "type": "bitmap", "name": "FRAME_16", "file": "images/frame_16.png" },
-        { "type": "bitmap", "name": "FRAME_17", "file": "images/frame_17.png" },
-        { "type": "bitmap", "name": "FRAME_18", "file": "images/frame_18.png" },
-        { "type": "bitmap", "name": "FRAME_19", "file": "images/frame_19.png" },
-        { "type": "bitmap", "name": "FRAME_20", "file": "images/frame_20.png" },
-        { "type": "bitmap", "name": "FRAME_21", "file": "images/frame_21.png" },
-        { "type": "bitmap", "name": "FRAME_22", "file": "images/frame_22.png" },
-        { "type": "bitmap", "name": "FRAME_23", "file": "images/frame_23.png" },
-        { "type": "bitmap", "name": "FRAME_24", "file": "images/frame_24.png" },
-        { "type": "bitmap", "name": "FRAME_25", "file": "images/frame_25.png" },
-        { "type": "bitmap", "name": "FRAME_26", "file": "images/frame_26.png" },
-        { "type": "bitmap", "name": "FRAME_27", "file": "images/frame_27.png" },
-        { "type": "bitmap", "name": "FRAME_28", "file": "images/frame_28.png" },
-        { "type": "bitmap", "name": "FRAME_29", "file": "images/frame_29.png" }
+        {
+          "type": "bitmap",
+          "name": "FRAME_00",
+          "file": "images/frame_00.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_01",
+          "file": "images/frame_01.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_02",
+          "file": "images/frame_02.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_03",
+          "file": "images/frame_03.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_04",
+          "file": "images/frame_04.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_05",
+          "file": "images/frame_05.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_06",
+          "file": "images/frame_06.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_07",
+          "file": "images/frame_07.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_08",
+          "file": "images/frame_08.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_09",
+          "file": "images/frame_09.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_10",
+          "file": "images/frame_10.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_11",
+          "file": "images/frame_11.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_12",
+          "file": "images/frame_12.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_13",
+          "file": "images/frame_13.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_14",
+          "file": "images/frame_14.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_15",
+          "file": "images/frame_15.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_16",
+          "file": "images/frame_16.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_17",
+          "file": "images/frame_17.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_18",
+          "file": "images/frame_18.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_19",
+          "file": "images/frame_19.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_20",
+          "file": "images/frame_20.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_21",
+          "file": "images/frame_21.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_22",
+          "file": "images/frame_22.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_23",
+          "file": "images/frame_23.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_24",
+          "file": "images/frame_24.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_25",
+          "file": "images/frame_25.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_26",
+          "file": "images/frame_26.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_27",
+          "file": "images/frame_27.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_28",
+          "file": "images/frame_28.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "type": "bitmap",
+          "name": "FRAME_29",
+          "file": "images/frame_29.png",
+          "memoryFormat": "8bit"
+        },
+        {
+          "name": "DIN_CONDENSED_FFONT",
+          "file": "data/DINPro-CondensedMedium.ffont",
+          "targetPlatforms": [
+            "emery",
+            "gabbro"
+          ],
+          "type": "raw"
+        },
+        {
+          "file": "fonts/dripicons-v2.ttf",
+          "characterRegex": "[z]",
+          "name": "FONT_DRIPICONS_12",
+          "targetPlatforms": [
+            "emery",
+            "gabbro"
+          ],
+          "type": "font"
+        }
       ]
     }
   }

@@ -1,0 +1,193 @@
+[
+  {
+    "type": "heading",
+    "defaultValue": "Westworld"
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "defaultValue": "Features"
+      },
+      {
+        "type": "toggle",
+        "messageKey": "RemoveZero24h",
+        "label": "Remove leading zero from 24h time",
+        "description": "Applies when 24h time selected in watch settings",
+        "defaultValue": false
+      },
+      {
+        "type": "toggle",
+        "messageKey": "AddZero12h",
+        "label": "Add leading zero to 12h time",
+        "description": "Applies when 12h time selected in watch settings",
+        "defaultValue": false
+      },
+      {
+        "type": "toggle",
+        "messageKey": "showlocalAMPM",
+        "label": "Show AM PM when 12 hour clock selected",
+        "defaultValue": true
+      },
+      {
+        "type": "toggle",
+        "messageKey": "BTVibeOn",
+        "label": "Bluetooth Disconnect Vibe",
+        "description": "OFF = Never Vibrate, ON = Vibrate (when quiet time is off)",
+        "defaultValue": true
+      },
+      {
+        "type": "toggle",
+        "messageKey": "ShowTime",
+        "label": "Display the time",
+        "description": "OFF = Hide time, ON = Show time",
+        "defaultValue": true
+      },
+      {
+        "type": "toggle",
+        "messageKey": "ShowInfo",
+        "label": "Display Date.Month.Battery% above time",
+        "description": "OFF = Hide info, ON = Show info",
+        "defaultValue": true
+      },
+      {
+        "type": "toggle",
+        "messageKey": "ShowLine",
+        "label": "Show line below time",
+        "description": "OFF = Hide line, ON = Show line",
+        "defaultValue": true
+      },
+      {
+        "type": "toggle",
+        "messageKey": "ShowText",
+        "label": "Show text below time",
+        "description": "OFF = Hide text, ON = Show text",
+        "defaultValue": true
+      },
+      {
+         "type": "input",
+         "messageKey": "LogoText",
+         "defaultValue": "DIVERGENCE",
+         "label": "Custom Text",
+         "description": "Defaults to DIVERGENCE. Maximum 14 characters",
+         "attributes": {
+           "placeholder": "DIVERGENCE"
+         }
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "defaultValue": "Time & Text Colours"
+      },
+      {
+        "type": "color",
+        "messageKey": "time_text_color",
+        "label": "Time Colour",
+        "defaultValue": "0x000000",
+        "sunlight": true
+      },
+      {
+        "type": "color",
+        "messageKey": "other_text_color",
+        "label": "Info & Text Colour",
+        "defaultValue": "0x000000",
+        "sunlight": true
+      },
+      {
+        "type": "color",
+        "messageKey": "line_color",
+        "label": "Line Colour",
+        "defaultValue": "0x000000",
+        "sunlight": true
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "select",
+        "messageKey": "theme",
+        "label": "Eclipse/Rehoboam Colour Theme",
+        "defaultValue": "0",
+        "options": [
+          {
+            "label": "Original (white / black)",
+            "value": "0"
+          },
+          {
+            "label": "Inverted (black / white)",
+            "value": "1"
+          },
+          {
+            "label": "Cobalt (white / blue)",
+            "value": "2"
+          },
+          {
+            "label": "Ember (black / orange)",
+            "value": "3"
+          },
+          {
+            "label": "Forest (dark green / lime)",
+            "value": "4"
+          },
+          {
+            "label": "Custom",
+            "value": "5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "defaultValue": "Custom Colours",
+        "description": "Only used when theme is set to Custom above"
+      },
+      {
+        "type": "color",
+        "messageKey": "custom_bg",
+        "label": "Background",
+        "defaultValue": "FFFFFF",
+        "sunlight": true,
+        "description": "Replaces white (background)"
+      },
+      {
+        "type": "color",
+        "messageKey": "custom_lg",
+        "label": "Light Grey",
+        "defaultValue": "AAAAAA",
+        "sunlight": true,
+        "description": "Replaces light grey"
+      },
+      {
+        "type": "color",
+        "messageKey": "custom_dg",
+        "label": "Dark Grey",
+        "defaultValue": "555555",
+        "sunlight": true,
+        "description": "Replaces both dark greys"
+      },
+      {
+        "type": "color",
+        "messageKey": "custom_fg",
+        "label": "Foreground",
+        "defaultValue": "000000",
+        "sunlight": true,
+        "description": "Replaces black (ring lines)"
+      }
+    ]
+  },
+  {
+    "type": "submit",
+    "defaultValue": "Save Settings"
+  }
+]
